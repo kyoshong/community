@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+ 
+<tiles-definitions>
+	<!-- main layout -->
+	<definition name="layout-tiles" template="/WEB-INF/views/tiles/tiles-layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/tiles/headerTemplate.jsp" />
+		<put-attribute name="left" value="/WEB-INF/views/tiles/sidebarTemplate.jsp" />
+		<put-attribute name="foot" value="/WEB-INF/views/tiles/footerTemplate.jsp" />
+	</definition>
+	
+		<definition name="index" extends="layout-tiles">
+		<put-attribute name="body" value="/index.jsp" />
+		<put-attribute name="title" value="게시판" />
+	</definition>
+	
+	<definition name="main" extends="layout-tiles">
+		<put-attribute name="body" value="/WEB-INF/views/main.jsp" />
+	</definition>
+	
+	<definition name="service/login" extends="layout-tiles">
+		<put-attribute name="body" value="/WEB-INF/views/service/login.jsp" />
+	</definition>
+	
+	<definition name="service/find-id" extends="layout-tiles">
+		<put-attribute name="body" value="/WEB-INF/views/service/find-id.jsp" />
+	</definition>
+	
+	<definition name="service/find-pw" extends="layout-tiles">
+		<put-attribute name="body" value="/WEB-INF/views/service/find-pw.jsp" />
+	</definition>
+	
+	<definition name="service/details" extends="layout-tiles">
+		<put-attribute name="body" value="/WEB-INF/views/service/details.jsp" />
+	</definition>
+
+	<definition name="service/signup" extends="layout-tiles">
+		<put-attribute name="body" value="/WEB-INF/views/service/signup.jsp" />
+	</definition>
+	
+	<definition name="/service/email_Authentication/email_Authentication_main" 
+	template="/WEB-INF/views/service/email_Authentication/email_Authentication_main.jsp">
+	</definition>
+	
+</tiles-definitions>
